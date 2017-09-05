@@ -1,0 +1,819 @@
+*{
+    margin:0;
+    padding:0;
+}
+body{
+    font-family: 'texgyreheros',sans-serif;
+}
+.main{
+    width:100%;
+    font-size:16px;
+    font-weight: bold;
+    line-height: 30px;
+    overflow-y: scroll;
+}
+ul li{
+    list-style-type:none;
+}
+input,select{
+    padding-left:10px;
+}
+input[type=text],select{
+    height:30px;
+    padding-left:10px;
+}
+input[type="checkbox"]{
+    width:10px !important;
+    margin-right: 15px;
+}
+a{
+    color:white;
+    text-decoration: none;
+}
+.main img{
+    width:195px;
+    height:46px;
+}
+.m-left{
+    width: 197px;
+    color:white;
+    position: fixed;
+    top:0;
+    bottom: 0;
+    border-right:1px solid #dddddd;
+    background-color: #37454a;
+    overflow: hidden;
+    min-width: 50px;
+    text-align: center;
+    z-index: 1;
+}
+.m-left ul li{
+    width:195px;
+    height:48px;
+    border-bottom: 1px solid #465054;
+    opacity: 0.4;
+    cursor: pointer;
+}
+.m-left ul li:hover{
+    opacity: 1;
+}
+.m-left ul .active{
+    opacity: 1;
+    border:1px dotted white;
+    border-left:3px solid #47a3da;
+}
+.m-left img{
+    position: relative;
+    float:left;
+}
+.nav img{
+    cursor: pointer;
+}
+.m-left ul .nav{
+    height:48px;
+    width:196px;
+    font-size:20px;
+    line-height: 48px;
+    position: relative;
+    opacity: 1;
+    background-color: #47a3da;
+}
+.m-left .logout{
+    position: fixed;
+    bottom: 0;
+    left:0;
+    border-bottom: none;
+    border-top: 1px solid #465054;
+    width:196px;
+    z-index: 120;
+}
+/*信息展示部分*/
+.m-right{
+    position: fixed;
+    top:0;
+    bottom:0;
+    width:100%;
+}
+.mr-header{
+    background-color: #eee;
+    height:48px;
+    line-height: 50px;
+    border-bottom:1px solid #ddd;
+    border-right: 1px solid #ddd;
+    padding-left:220px;
+    overflow: hidden;
+}
+.mr-view .left{
+    margin-right:200px;
+    float:left;
+}
+.mr-view{
+    background-color: white;
+    border-bottom: none;
+    padding-left:220px;
+    overflow: visible;
+}
+.mr-view a{
+    cursor:pointer;
+}
+.mr-view ul li{
+    color:#000;
+}
+.mr-header ul li{
+    margin-right:5px;
+    width:90px;
+    display: inline-block;
+    cursor: pointer;
+    text-align: left;
+}
+.mr-header .uuid{
+    width:400px;
+}
+.mr-header .small{
+    width:40px;
+}
+ .mrd-state{
+    width:60px !important;
+    height:40px !important;
+    font-weight: lighter;
+    margin-right:40px !important;
+    line-height: 40px;
+    text-align: center !important;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+ }
+ .mrd-state-offline{
+     background-color: #d43f3a;
+ }
+ .mrd-state-online{
+     background-color: #46b8da;
+ }
+/*设备详情展示*/
+.mrd-header{
+    background-color: #eee;
+    height:48px;
+    line-height: 50px;
+    border-bottom:1px solid #ddd;
+    border-right: 1px solid #ddd;
+    padding-left:180px;
+
+}
+.mrd-header ul li{
+    display: inline-block;
+    padding:0 20px 0 20px;
+    border-right: 1px solid #dddddd;
+    cursor:pointer;
+}
+.mrd-header .uid{
+    width:200px;
+}
+/**每个设备信息展示*/
+/*设备状态与设置*/
+.mrd-view{
+    position: fixed;
+    top:50px;
+    bottom: 0;
+    background-color: white;
+    border-bottom: none;
+}
+.mrd-view ul li{
+    overflow: hidden;
+    line-height: 40px;
+    background-color: #f6f6f6;
+    border-left:1px solid #dddddd;
+    border-right: 1px solid #dddddd;
+    cursor:pointer;
+}
+.mrd-list{
+    width:180px;
+    height:586px;
+    float:left;
+    padding-left:20px;
+}
+.mrd-list label{
+    display: inline-block;
+    width:180px;
+    height:38px;
+    line-height: 38px;
+    font-size:16px;
+    font-weight: lighter;
+    background-color: #eeeeee;
+}
+.mrd-list label input{
+    width:5px;
+    height:38px;
+    float:left;
+}
+.mrd-list label span{
+    display: inline-block;
+    width:140px;
+    height:38px;
+    overflow: hidden;
+    padding-left:10px;
+}
+.mrd-item{
+    position: relative;
+    width: 100%;
+    height:100%;
+    margin-left:199px;
+    border-left:1px solid #dddddd;
+}
+.mrd-item p{
+    padding-left:20px;
+    background-color: white;
+}
+.mrd-item .item{
+    position: fixed;
+    top:90px;
+    bottom:150px;
+    width:987px;
+    height:480px;
+    border-left:1px solid #dddddd;
+    background-color: #f6f6f6;
+    border-top: 1px solid #dddddd;
+    border-bottom: 1px solid #dddddd;
+}
+.mrd-item h4{
+    font-size:20px;
+    border-bottom: 1px solid #dddddd;
+}
+.mrd-item label{
+    display: inline-block;
+    width:400px;
+}
+.mrd-item select,.mrd-item input{
+    width: 260px;
+    padding-left:5px;
+}
+.item-status{
+    width:987px;
+    height:480px;
+    overflow-y: scroll;
+    padding-left:20px;
+}
+/*设备配置*/
+.item-config .tab{
+    margin:0;
+    padding:0;
+    height: 54px;
+    border-bottom: 1px solid #dddddd;
+}
+.item-config .conbasic{
+    width:107px;
+    height:34px;
+    background-image: url("/public/img/conbasic.png");
+}
+.item-config .conall{
+    width:65px;
+    height:34px;
+    background-image: url("/public/img/conall.png");
+}
+.item-config .conread{
+    width:190px;
+    height:34px;
+    background-image: url("/public/img/conread.png");
+}
+.item-config .conwrite{
+    width:190px;
+    height:34px;
+    background-image: url("/public/img/conwrite.png");
+}
+.item-config .right{
+    position: relative;
+    margin-right:10px;
+}
+/*设备 图表样式*/
+.item-chart .tab{
+    width:100%;
+    height:70px;
+    background: white;
+    padding-left:20px;
+    line-height: 70px;
+    display: inline-block;
+    border-bottom: 1px solid #dddddd;
+}
+.item-chart .dateRange{
+    display: inline-block;
+    border: 1px solid #ddd;
+    margin-top: 15px;
+    margin-right:100px;
+    font-size:16px;
+    width:266px;
+    height:40px;
+    line-height: 20px;
+    float:right;
+}
+.item-chart .content{
+    width:100%;
+    height:394px;
+    overflow-y: scroll;
+    padding-left:20px;
+}
+.item-chart .default{
+    width:940px;
+    height:500px;
+}
+/*实时视图显示*/
+.item-lview .tab{
+    height:40px;
+    width:100%;
+    background-color: white;
+    border-bottom: 1px solid #dddddd;
+    line-height: 40px;
+    display: inline-block;
+}
+.item-lview .tab-input{
+    float:left;
+    padding-left:20px;
+}
+.item-lview .tab-input button{
+    margin:2px 0 2px 0;
+    font-size:16px;
+}
+.item-lview .tab .tab-slid{
+    padding-left:100px;
+}
+.item-lview .tab-slid input{
+    display: inline-block;
+    width:260px;
+    height:10px;
+    margin-left:20px;
+}
+/*滑动条，样式设置*/
+input[type=range]{
+    -webkit-appearance: none;
+    width:300px;
+    border-radius: 10px;
+}
+input[type=range]::-webkit-slider-thumb{
+    -webkit-appearance: none;
+}
+input[type=range]::-moz-range-track{
+    height:15px;
+    border-radius: 10px;
+    box-shadow:0 1px 1px #def3f8 ,inset 0 .125em .125em #0d1112;
+}
+input[type=range]::-webkit-slider-runnable-track{
+    height:15px;
+    border-radius: 10px;
+    box-shadow:0 1px 1px #def3f8 ,inset 0 .125em .125em #0d1112;
+}
+input[type=range]:focus{
+    outline: none;
+}
+input[type=range]::-moz-range-thumb{
+    -webkit-appearance: none;
+    height:25px;
+    width:25px;
+    margin-top:-5px;
+    background: #ffffff;
+    border-radius: 50%;
+    border:solid 0.125em rgba(205,224,230,0.5);
+    box-shadow:0 .125em .125em #3b4547;
+}
+input[type=range]::-webkit-slider-thumb{
+    -webkit-appearance: none;
+    height:25px;
+    width:25px;
+    margin-top:-5px;
+    background: #ffffff;
+    border-radius: 50%;
+    border:solid 0.125em rgba(205,224,230,0.5);
+    box-shadow:0 .125em .125em #3b4547;
+}
+input[type=range]::-moz-range-progress{
+    background: linear-gradient(to right,#059cfa,white 100%,white);
+    height:13px;
+    border-radius: 10px;
+}
+/*input[type=range]::-ms-track{
+    height:25px;
+    border-radius:10px;
+    box-shadow:0 1px 1px #def3f8 ,inset 0 .125em .125em #0d1112;
+    border-color:transparent;
+    color:transparent;
+}
+input[type=range]::-ms-thumb{
+    border:solid 0.125em rgba(205,224,230,.5);
+    height:25px;
+    width:25px;
+    border-radius: 50%;
+    background: #ffffff;
+    margin-top:-5px;
+    box-shadow:0 .125em .125em #3d4547;
+}
+input[type=range]::-ms-fill-lower{
+    height:22px;
+    border-radius: 10px;
+    background: linear-gradient(to right,#059cfa,white 100%,white);
+}
+input[type=range]::-ms-fill-upper{
+    height:22px;
+    border-radius: 10px;
+    background: #ffffff;
+}
+input[type=range]:focus::-ms-fill-lower{
+    background: linear-gradient(to right,#059cfa,white 100%);
+}
+input[type=range]:focus::-ms-fill-upper{
+    background: #ffffff;
+}*/
+.item-lview .content{
+    width: 100%;
+    height:424px;
+    overflow-y: scroll;
+}
+.item-lview .backDraw{
+    position: relative;
+    display: inline-block;
+    box-sizing: border-box;
+    max-width:936px;
+    max-height: 468px;
+    background-color: white;
+    margin-left:12px;
+}
+.item-lview .default{
+    position: relative;
+    float:left;
+    width:448px;
+    height:362px;
+    margin-left:10px;
+    text-align: center;
+}
+.item-lview .backDraw>label{
+    position: relative;
+    width:100%;
+    text-align: center;
+}
+.item-lview .default img{
+    position: relative;
+    width:100%;
+    height:100%;
+    left:0;
+    top:0;
+}
+/*设置虚拟屏的显示*/
+.mr-right{
+    height: 100%;
+}
+.m-right .backend{
+    float:right;
+    margin-right:150px;
+}
+.mr-view .item{
+     position: fixed;
+     height:calc(100% - 100px);
+     width: calc(100% - 196px);
+     top:50px;
+     bottom: 50px;
+     overflow-y: scroll;
+     border-bottom: 1px solid #dddddd;
+ }
+.mr-view a{
+    display: block;
+    border-bottom: 1px solid #dddddd;
+}
+.mr-view .mrs-list{
+    height:100%;
+    float:left;
+    margin-left:-20px;
+}
+.mrs-view{
+    position: fixed;
+    top:50px;
+    bottom: 50px;
+    width:100%;
+    height:calc(100% - 100px);
+}
+.mr-view .mrs-item{
+    position: relative;
+    width: 980px;
+    height:900px;
+    margin-left:160px;
+    border-left:1px solid #ddd;
+    border-bottom: 1px solid #dddddd;
+    background-color: #eee;
+}
+.mrs-item p{
+    width:100%;
+    height:50px;
+    padding-left:20px;
+    line-height: 50px;
+    background-color: white;
+    border-bottom: 1px solid #dddddd;
+}
+.mrs-item .mrs-setting{
+    position: fixed;
+    top:100px;
+    bottom:50px;
+    width:calc(100% - 380px);
+    height:900px;
+    padding-left:20px;
+    overflow-y: scroll;
+}
+.mrs-setting label{
+    display: inline-block;
+    width:400px;
+}
+.mrs-setting input,.mrs-setting select{
+    padding-left:8px;
+    width:350px;
+}
+.mrs-item h4{
+    border-bottom: 1px solid #dddddd;
+}
+.mrs-btn{
+    width:980px;
+    height:50px;
+    background-color: white;
+    position: fixed;
+    line-height: 50px;
+    bottom:4px;
+    padding-left:20px;
+}
+.mrs-btn ul li{
+    color:white;
+    height:35px;
+    line-height: 35px;
+    text-align: center;
+    background-color:#d43f3a;
+    opacity: 0.8;
+}
+.mrs-btn ul li:hover{
+    opacity: 1;
+}
+.mrs-btn .right{
+    float:right;
+    margin-right: 30px;
+    background-color: white;
+    border: 1px solid #eeeeee;
+    margin-top:10px;
+}
+.mrs-btn ul .closebtn{
+    background-color: #dddddd;
+    color:black;
+}
+.mrs-btn ul .savebtn{
+    background-color: #47a3da;
+}
+.mrs-btn input{
+    background: none;
+    border: none;
+}
+.mrs-btn button{
+    color:white;
+    font-size:18px;
+    font-weight:bold;
+    background: none;
+}
+button:hover{
+    color:white !important;
+}
+.mrs-lview .view-item{
+    height:35px;
+    width:100%;
+    padding-left:20px;
+    background-color: white;
+    display: inline-block;
+}
+.view-item span{
+    display: inline-block;
+    width:300px;
+    height:10px;
+    padding:0 10px 0 10px;
+    border: 1px solid #dddddd;
+}
+.mrs-item .view-show{
+    width:910px;
+    background-color: white;
+    border-radius: 10px;
+    text-align: center;
+    margin:10px;
+}
+/*设置按钮始终在最底层*/
+.mrd-btn{
+    position: fixed;
+    border-left:1px solid #dddddd;
+    padding-left:10px;
+    bottom:0;
+    height:66px;
+    line-height: 66px;
+}
+.mrd-btn input{
+    max-width: 75px;
+    height: 30px;
+    font-size:16px;
+    font-weight: bold;
+    background: none;
+    border:none;
+    color:white;
+}
+.mrd-btn a{
+    color:white;
+}
+.mrd-btn ul{
+    padding-top:10px;
+}
+.mrd-btn ul li{
+    max-width: 130px;
+    line-height: 30px;
+    background-color: #d43f3a;
+    opacity: 0.8;
+}
+.mrd-btn ul li:hover{
+    opacity: 1;
+}
+.mrd-btn .closebtn{
+    text-align: center;
+    border: none;
+    background-color: #ddd;
+    margin-left:100px;
+}
+.mrd-btn .closebtn input{
+    color:black;
+}
+#save{
+    position: fixed;
+    bottom:20px;
+    width:80px;
+    height:30px;
+    line-height: 30px;
+    right:50px;
+    float:right;
+    border: none;
+    background-color: #47a3da;
+    opacity: 0.8;
+}
+#save:hover{
+    opacity: 1;
+}
+/*应用程序功能设计*/
+.mra-header{
+    width:100%;
+    height:49px;
+    line-height: 49px;
+    padding-left:220px;
+    background-color: #eeeeee;
+    overflow: hidden;
+}
+.mra-header ul li{
+    width:177px;
+    display: inline-block;
+}
+.m-right .url{
+    min-width:233px;
+    width:48%;
+}
+.mra-list{
+    /*position: fixed;
+    top:50px;
+    bottom:50px;
+    height: calc(100% - 100px);
+    border-bottom: 1px solid #dddddd;*/
+   width:100%;
+    line-height: 49px;
+    padding-left:200px;
+    overflow-y: scroll;
+}
+.mra-list input{
+    padding:0 2px 0 2px;
+    text-align: left;
+    width:177px;
+    height:40px;
+}
+.mra-list .url{
+    min-width:233px;
+    width:49%;
+}
+.mra-list .url input{
+    width:90%;
+}
+.mra-list ul{
+    padding-left:20px;
+    border-top: 1px solid #dddddd;
+}
+.mra-list ul a{
+    color:black;
+}
+.mra-list ul li{
+    margin-left:3px;
+    width: 177px;
+    display: inline-block;
+}
+.mra-list .opera{
+    float:right;
+    margin-right:50px;
+    width:120px;
+    height:40px;
+    margin-top:8px;
+    line-height: 20px;
+}
+/*用户*/
+/*设置信息*/
+.mrs-content{
+    position: fixed;
+    top:0;
+    bottom:50px;
+    padding-left:200px;
+    width:100%;
+    height:calc(100% - 50px );
+    font-weight: lighter;
+    line-height: 40px;
+    background-color: #eeeeee;
+    border: 1px solid #dddddd;
+    overflow-y: scroll;
+}
+.mrs-content .content{
+    padding-left:10px;
+}
+.mrs-content h4{
+    font-weight: bold;
+    padding:10px 0 2px 0;
+    border-bottom: 1px solid #dddddd;
+}
+.mrs-content .left{
+    width:500px;
+    float:left;
+}
+.mrs-content .right{
+    padding-top:8px;
+}
+.content .right input,.content .right select{
+    width:40%;
+}
+.content ul .CheckBox{
+    height:160px;
+}
+/*公用底层按钮样式*/
+.m-btn{
+    position: fixed;
+    bottom: 0;
+    height:50px;
+    line-height: 50px;
+    width:100%;
+    display: inline-block;
+    padding-left: 200px;
+    border-top:1px solid #ddd;
+}
+.m-btn ul{
+    margin:6px 15px;
+}
+.m-btn ul li{
+    float: right;
+    min-width: 70px;
+    height: 34px;
+    text-align: center;
+    line-height: 29px;
+    margin-left:20px;
+    padding:3px 5px;
+    border-radius: 4px;
+    background-color: #d43f3a;
+    cursor:pointer;
+    opacity: 0.8;
+}
+.m-btn ul li:hover{
+    opacity: 1;
+}
+.m-btn .closebtn{
+    color:black;
+    border:1px solid #dddddd;
+    background-color: white;
+}
+.m-btn .save{
+    background-color: #47a3da;
+}
+.m-btn input{
+    background:none;
+    border: none;
+    cursor: pointer;
+}
+/**
+点击事件 动态HTML页面渲染
+添加用户，添加APIkey
+*/
+.mra-list .enable{
+    width:50px;
+}
+.mra-list .enable input{
+    width:10px;
+}
+.mra-list .opera input{
+    width:40px;
+    height:10px;
+    cursor:pointer;
+}
+/*提示，插件样式*/
+.tip{
+    width:35px;
+    height:35px;
+    text-align: center;
+    line-height: 35px;
+    font-size: 20px;
+    display: inline-block;
+    float:right;
+    margin-right: 100px;
+    border-radius: 50%;
+    background-color: white;
+    border: 1px solid #eeeeee;
+    cursor:pointer;
+}
